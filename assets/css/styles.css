@@ -1,0 +1,207 @@
+/*Importamos el archivo de las fuentes CSS para poder utilizarlas en nuestro proyecto solo con la propiedad font-family: ...*/
+
+@import url('fonts.css');
+
+:root{
+    --color-body: #b6c1ce;
+    --color-heading: #ebeef5;
+    --color1: #1F2544;
+    --color2: #474F7A;
+    --color3: #81689D;
+    --color4: #FFD0EC;
+    --sidebar-width: 240px;
+}
+
+body{
+    background-color: var(--color2);
+    color:var(--color-body);
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover{
+    color:var(--color3);
+}
+
+img{
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color4);
+}
+
+.bg-base {
+    background-color: var(--color1);
+}
+
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color4);
+}
+
+/*NAVBAR*/
+.navbar{
+    background-color:var(--color1);
+}
+
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffff;
+}
+
+.navbar .nav-link:hover{
+    color: var(--color4);
+}
+
+.text-text{
+    color: var(--color4);
+}
+
+@media (min-width: 992px){
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidebar-width);
+        background: linear-gradient(rgba(31, 37, 68, 0.8),rgba(31, 37, 68, 0.8)), url(../img/sidebar-imag.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img{
+        border: 8px solid var(--color4);
+    }
+
+    /* content w*/
+    #contect-wrapper{
+        padding-left: var(--sidebar-width);
+    }
+}
+
+/*BTN*/
+
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+.btn-brand{
+    background-color: var(--color4);
+    border-color: var(--color4);
+}
+
+.btn-brand:hover,.btn-brand:focus{
+    background-color: var(--color3);
+    color: var(--color4);
+    border-color: var(--color3);
+}
+
+.link-custom{
+    font-weight: 700;
+    position: relative;
+    color: var(--color4);
+}
+
+.link-custom::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color3);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after{
+    width: 100%;
+}
+
+/*CARD*/
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.02);
+}
+
+/*CONTACT*/
+#contact .form-control {
+    background-color: var(--color1);
+    border-color: var(--color1);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color4);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/*LANGUAGES*/
+#languages .col-auto {
+    padding: 10px;
+}
+
+#languages i {
+    font-size: 100px;
+    display: block;
+    margin: auto;
+    color: var(--color4);
+    transition: all 0.4s ease;
+}
+
+#languages i:hover {
+    transform: scale(1.1);
+}
+
+/*SOCIALS*/
+
+.socials {
+
+}
+
+.socials a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1);
+    border-radius: 100px;
+    font-size: 24px;
+}
